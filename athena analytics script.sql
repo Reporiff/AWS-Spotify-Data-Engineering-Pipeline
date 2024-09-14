@@ -60,4 +60,4 @@ SELECT
     AVG(track_duration) AS avg_duration,
     MIN(track_duration) AS min_duration,
     MAX(track_duration) AS max_duration
-FROM track_data;}
+FROM track_data;
