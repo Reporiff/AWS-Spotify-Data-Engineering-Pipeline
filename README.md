@@ -21,18 +21,18 @@ The purpose of this project is to build a fully functional data pipeline using A
 - **Pandas**: For data manipulation during the transformation phase.
 
 ## Architecture Diagram
-![Architecture Diagram]([path_to_architecture_diagram.png](https://github.com/Reporiff/AWS-Spotify-Data-Engineering-Pipeline/blob/main/Resources/Architecture%20Diagram.png))
+![Architecture Diagram](https://github.com/Reporiff/AWS-Spotify-Data-Engineering-Pipeline/blob/main/Resources/Architecture%20Diagram.png)
 
 ## Process Overview
 1. **Data Extraction**:
    - Data pulled from the Spotify API in nested JSON format.
-   - AWS Lambda function (`spotify_api_data_extraction`) triggers daily to extract the data and store it in S3 (`raw_data/` folder).
+   - AWS Lambda function ([`spotify_api_data_extraction`](https://github.com/Reporiff/AWS-Spotify-Data-Engineering-Pipeline/blob/main/spotify_api_data_extraction.py)) triggers daily to extract the data and store it in S3 ([`raw_data/`](https://github.com/Reporiff/AWS-Spotify-Data-Engineering-Pipeline/tree/main/Raw%20Data) folder).
    - Environment variables are used to store the client ID and secret key for API authentication.
 
 2. **Data Transformation**:
-   - Pandas used in the transformation Lambda function (`spotify_api_data_transformation`) to clean and format data.
+   - Pandas used in the transformation Lambda function ([`spotify_api_data_transformation`](https://github.com/Reporiff/AWS-Spotify-Data-Engineering-Pipeline/blob/main/spotify_api_data_transformation.py)) to clean and format data.
    - AWS Lambda layer created to import the necessary Spotipy and Pandas packages.
-   - The transformed data is stored in S3 (`transformed_data/` folder) as CSV.
+   - The transformed data is stored in S3 ([`transformed_data/`](https://github.com/Reporiff/AWS-Spotify-Data-Engineering-Pipeline/tree/main/Transformed%20Data) folder) as CSV.
 
 3. **Automation**:
    - **EventBridge** triggers the extraction Lambda function once a day at 12 PM using cron scheduling.
