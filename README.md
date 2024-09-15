@@ -1,7 +1,7 @@
 # AWS Spotify Data Engineering Pipeline
 
 ## Purpose
-The purpose of this project is to build a fully functional data pipeline using AWS that extracts data from the Spotify API, processes it, and prepares it for future visualization tools that will provide live analytics.
+The purpose of this project is to build a fully functional data pipeline using AWS that extracts data from the Spotify API, processes it, and prepares it for tools that will provide live analytics.
 
 ## Resources Used
 - Spotify API for data extraction from the public playlist **[Housewerk](https://open.spotify.com/playlist/37i9dQZF1DXa8NOEUWPn9W?si=28c19eb0023b4058)**.
