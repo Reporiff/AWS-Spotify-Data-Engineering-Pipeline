@@ -11,15 +11,6 @@ The purpose of this project is to build a fully functional data pipeline using A
 - Spotipy Python package for interacting with Spotify's API.
 - Pandas Python package for data transformation.
 
-## Technologies Used
-- **Python**: For scripting and data processing.
-- **AWS Lambda**: For serverless execution of extraction and transformation functions.
-- **AWS S3**: For storing raw and transformed data.
-- **AWS Glue**: For cataloging and crawling the data.
-- **AWS Athena**: For querying the data and generating analytics.
-- **Spotipy**: For interacting with the Spotify API.
-- **Pandas**: For data manipulation during the transformation phase.
-
 ## Architecture Diagram
 ![Architecture Diagram](https://github.com/Reporiff/AWS-Spotify-Data-Engineering-Pipeline/blob/main/Resources/Architecture%20Diagram.png)
 
